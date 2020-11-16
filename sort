@@ -38,7 +38,9 @@ public class sort
                     ar[i] = ar[pos];
                     ar[pos] = temp;
                 }
-                else if(ar[pos].length() == ar[i].length())
+                
+                //reverse alphabetical order if same length
+                if(ar[pos].length() == ar[i].length())
                 {
                     char letter1 = ar[pos].charAt(0);
                     char letter2 = ar[i].charAt(0);
