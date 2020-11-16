@@ -9,8 +9,7 @@ public class sort
         int size = sc.nextInt();
         int chosenString = sc.nextInt();
         chosenString++;
-        String [] ar = null;
-        ar = new String[size];
+        String [] ar = new String[size];
         
         for(int i = 0; i < ar.length; i++)
         {
