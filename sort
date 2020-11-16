@@ -1,0 +1,57 @@
+import java.util.*;
+
+public class sort
+{
+    public static void main(String []args)
+    {
+        Scanner sc = new Scanner(System.in);
+
+        int size = sc.nextInt();
+        int chosenString = sc.nextInt();
+        chosenString++;
+        String [] ar = null;
+        ar = new String[size];
+        
+        for(int i = 0; i < ar.length; i++)
+        {
+            ar[i] = sc.nextLine();
+        }
+        
+        Sorting(ar);
+        
+        //print the element at the number the user enters
+        System.out.println(ar[chosenString]);
+    }
+
+    public static void Sorting(String[] ar)
+    {
+        int length = ar.length;
+        
+        for(int i = 0; i < length; i++)
+        {
+            for(int pos = i+1; pos < length; pos++)
+            {
+                if(ar[pos].length() < ar[i].length())
+                {
+                    String temp = new String("");
+                    temp = ar[i];
+                    ar[i] = ar[pos];
+                    ar[pos] = temp;
+                }
+                else if(ar[pos].length() == ar[i].length())
+                {
+                    char letter1 = ar[pos].charAt(0);
+                    char letter2 = ar[i].charAt(0);
+                    
+                    if(letter1 > letter2)
+                    {
+                        String temp = new String("");
+                        temp = ar[i];
+                        ar[i] = ar[pos];
+                        ar[pos] = temp;
+                    }
+                }
+            }
+        }
+    }
+}
